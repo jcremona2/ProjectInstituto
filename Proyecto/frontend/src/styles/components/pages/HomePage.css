@@ -1,0 +1,10 @@
+/* Home */
+
+#home {
+    margin-left: auto;
+    width: 80%;
+}
+
+.carousel-indicators {
+    background-color: transparent;
+}

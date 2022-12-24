@@ -1,0 +1,11 @@
+/* Pie de Pagina */
+
+footer{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.list-group-item{
+    background-color: transparent;
+    border: none;
+}

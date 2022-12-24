@@ -1,0 +1,32 @@
+ nav {
+     margin-bottom: 20%;
+     margin-top: -20%;
+ }
+
+ .navli {
+     display: flex;
+     justify-content: flex-end;
+
+ }
+
+ .nav-link {
+     margin: 10px;
+     color: #fef0e5;
+
+ }
+
+ .tab-content {
+     margin-top: 20%;
+ }
+
+ .active button {
+     background-color: #fef0e5;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ svg{
+    margin-left: 5px;
+ }
