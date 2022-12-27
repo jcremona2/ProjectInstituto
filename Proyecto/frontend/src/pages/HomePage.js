@@ -1,8 +1,21 @@
-import React from 'react'
+
+import '../styles/components/pages/HomePage.css'
+
+
 
 const HomePage = (props) => {
-    return(
-        <h1>Hola Soy la Pagina de Home</h1>
+    return (
+        <div className="home">
+
+            <img src="../images/home/1.png" />
+
+            <img src="../images/home/3.png" />
+
+            <img src="../images/home/4.png" />
+
+        </div>
+
+
     )
 }
 

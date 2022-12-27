@@ -1,0 +1,36 @@
+.holder {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+
+}
+
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.news-card{
+    box-shadow: 1px 1px 100px #395376;
+    margin: 20px;
+    border: 1px solid ;
+    border-radius: 30px;
+}
+
+.news-card div{
+    margin: 10px;
+}
+
+.column img{
+    max-width: max-content;
+    width: 60vw;
+    border-radius: 30px;
+}
+.column h2,h3,h4{
+    text-shadow: 10px 10px 50px lightcyan;
+}

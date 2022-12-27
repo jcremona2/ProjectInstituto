@@ -1,10 +1,14 @@
-/* Home */
-
-#home {
+.home {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
     margin-left: auto;
-    width: 80%;
-}
+    margin-right: auto;
 
-.carousel-indicators {
-    background-color: transparent;
+
 }
+ .home img{
+    width: 25vw;
+    margin: 1vw;
+ }
+

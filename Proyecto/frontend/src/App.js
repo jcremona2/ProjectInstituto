@@ -1,12 +1,11 @@
 import React from 'react'
+// css base
+import './App.css'
+
+// header, footer and nav
 import './styles/components/layout/Footer.css'
 import './styles/components/layout/Header.css'
 import './styles/components/layout/Nav.css'
-import './styles/components/pages/ContactoPage.css'
-import './styles/components/pages/HomePage.css'
-import './styles/components/pages/NosotrosPage.css'
-import './styles/components/pages/NovedadesPage.css'
-import './App.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //import './App.css';

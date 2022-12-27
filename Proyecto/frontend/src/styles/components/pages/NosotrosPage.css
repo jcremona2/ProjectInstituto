@@ -1,14 +1,30 @@
+
+.institucional {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 80vw;
+    margin: 5px;
+    border: #fef0e5 2px solid;
+    border-radius: 10px;
+}
 .card-title {
+    font-weight: 900;
+    padding-left: 5%;
     color: #fef0e5;
 }
 
 .card-text {
+    padding-left: 5%;
     font-size: small;
 }
+.card-img-top{
+    max-width: 100%;
 
-.institucional {
-    padding-left: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
 }

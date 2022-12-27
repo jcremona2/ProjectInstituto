@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/components/pages/ContactoPage.css'
 
 const ContactoPage = (props) => {
     return (
@@ -27,15 +28,13 @@ const ContactoPage = (props) => {
                 </div>
                 <div>
                     <label for="inputconsulta" >Consulta</label>
-                    <textarea id="inputconsulta" rows="3"></textarea>
+                    <textarea id="inputconsulta" ></textarea>
                 </div>
                 <div>
-                    <div >
-                        <input type="checkbox" />
-                        <label rows="3">
-                            Quiero que me envien las ultimas novedades
-                        </label>
-                    </div>
+                    <input type="checkbox" />
+                    <label >
+                        Quiero que me envien las ultimas novedades
+                    </label>
                 </div>
                 <div>
                     <button type="submit">Enviar</button>
