@@ -1,13 +1,15 @@
 .holder {
-    display: flex;
-    margin-right: auto;
     margin-left: auto;
-    justify-content: center;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    flex-wrap: wrap;
 
 }
 
 
-.row {
+/* .row {
     display: flex;
 }
 
@@ -24,13 +26,13 @@
 
 .news-card div{
     margin: 10px;
-}
+} */
 
-.column img{
+/* .column img{
     max-width: max-content;
     width: 60vw;
     border-radius: 30px;
 }
 .column h2,h3,h4{
     text-shadow: 10px 10px 50px lightcyan;
-}
+} */

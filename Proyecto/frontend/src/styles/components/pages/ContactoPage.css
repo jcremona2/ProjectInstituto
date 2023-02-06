@@ -1,32 +1,9 @@
   .contacto {
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-      width: 80vw;
-
-  }
-
-
-  label {
-      margin-right: 300px;
-  }
-
-  form {
-      text-align: center;
-      max-width: 300px;
-      padding: 0px 20px 20px 20px;
-      border: 1px solid;
-      border-radius: 10px;
       justify-content: center;
   }
 
-  h3 {
-      text-align: center;
-      font-weight: bolder;
-  }
-
-  button {
-      margin-left: 200px;
-      width: auto;
-  }
+.form1{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+}

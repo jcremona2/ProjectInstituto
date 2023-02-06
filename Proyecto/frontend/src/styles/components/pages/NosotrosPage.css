@@ -6,6 +6,7 @@
     justify-content: space-evenly;
     width: 80vw;
     flex-wrap: wrap;
+    color: rgb(95, 93, 93);
 }
 
 .card {
@@ -17,7 +18,6 @@
 .card-title {
     font-weight: 900;
     padding-left: 5%;
-    color: #fef0e5;
 }
 
 .card-text {

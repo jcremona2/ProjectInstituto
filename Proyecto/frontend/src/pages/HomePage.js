@@ -1,23 +1,41 @@
 
 import '../styles/components/pages/HomePage.css'
+import Carousel from 'react-bootstrap/Carousel';
 
-
-
-const HomePage = (props) => {
+function HomePage() {
     return (
         <div className="home">
+            <Carousel fade>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="../images/home/1.png"
+                        alt="First slide"
+                    />
 
-            <img src="../images/home/1.png" />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src="../images/home/3.png"
+                        alt="Second slide"
+                    />
 
-            <img src="../images/home/3.png" />
+                </Carousel.Item>
+                <Carousel.Item >
+                    <img
+                        className="d-block w-100"
+                        src="../images/home/4.png"
+                        alt="Third slide"
+                    />
 
-            <img src="../images/home/4.png" />
+                </Carousel.Item>
+            </Carousel>
 
         </div>
 
-
-    )
+    );
 }
 
-
 export default HomePage;
+

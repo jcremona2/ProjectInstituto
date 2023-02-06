@@ -1,12 +1,10 @@
 /* Header */
-a {
+/* a {
   background-color: #2c415d;
-}
+} */
 
 .logo {
   margin: 0;
   justify-self: right;
   width: 30%;
-  background-color: #2c415d;
-
 }

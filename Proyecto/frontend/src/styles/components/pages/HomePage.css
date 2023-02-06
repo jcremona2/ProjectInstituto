@@ -1,14 +1,9 @@
 .home {
-    display: flex;
-    width: 80vw;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-
-
+    padding-left: 20vw;
+    padding-right: 15vw;
+    padding-bottom: 10vh;
 }
- .home img{
-    width: 25vw;
-    margin: 1vw;
- }
 
+.home img{
+    border-radius: 10px;
+}
