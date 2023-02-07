@@ -1,8 +1,13 @@
 .contacto {
+    display: flex;
       justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
   }
 
 .form1{
+    max-width: 600px;
+    width: 80vw;
     padding: 10px;
     border: 2px solid white;
     border-radius: 15px;

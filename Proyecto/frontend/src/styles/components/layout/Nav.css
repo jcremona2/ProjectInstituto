@@ -1,18 +1,23 @@
 
 
  .navli {
-        margin-top: -13vw;
+        margin-top: -10vw;
         display: flex;
         justify-content: flex-end;
-        width: 60vw;
+        padding-bottom: 5vh;
+        
  }
 
  .nav-link {
     width: 80px;
-     margin: 10px;
+     margin: 2vw;
      color: #fef0e5;
  }
 
  svg {
      margin-right: 5px;
  }
+
+ /* .start-link{
+    padding-left: 8vw;
+ } */

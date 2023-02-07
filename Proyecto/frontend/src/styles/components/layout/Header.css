@@ -4,7 +4,8 @@
 } */
 
 .logo {
-  margin: 0;
+  margin: 5px;
+  margin-bottom: 7vw;
   justify-self: right;
-  width: 30%;
+  width: 18vw;
 }

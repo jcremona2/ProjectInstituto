@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function HomePage() {
     return (
         <div className="home">
+            
             <Carousel fade>
                 <Carousel.Item>
                     <img

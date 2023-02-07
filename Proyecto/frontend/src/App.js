@@ -17,6 +17,7 @@ import ContactoPage from "./pages/ContactoPage";
 import HomePage from "./pages/HomePage";
 import NosotrosPage from "./pages/NosotrosPage";
 import NovedadesPage from "./pages/NovedadesPage";
+import CursadasPage from "./pages/CursadasPage";
 
 
 function App() {
@@ -29,9 +30,10 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/institucional' element={<NosotrosPage />} />
+          <Route path='/nosotros' element={<NosotrosPage />} />
           <Route path='/novedades' element={<NovedadesPage />} />
           <Route path='/contacto' element={<ContactoPage />} />
+          <Route path='/cursadas' element={<CursadasPage />} />
         </Routes>
 
       </BrowserRouter>
