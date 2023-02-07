@@ -1,5 +1,50 @@
-<div class="container">
+<div>
     <div class="row">
-        <p> Hola {{usuario}} <a href="/admin/login/logout">Cerrar Sesion</a></p>
+        <div class="col-7">
+            <h3>Listado de novedades</h3>
+        </div>
+        <div class="col-5 text-end">
+            <a class="btn btn-success" href="/admin/novedades/agregar">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                Nuevo
+            </a>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Titulo</th>
+                        <th scope="text-end">Imagen</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>
+                            {{{imagen}}}
+                        </td>
+                        <td class="text-end">
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </a>
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+
+
     </div>
 </div>

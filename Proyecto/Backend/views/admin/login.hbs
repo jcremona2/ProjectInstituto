@@ -1,20 +1,25 @@
-<div>
-    <div class="row">
+<div class="login">
         <form action="/admin/login" method="post">
-            <div class="row">
-                <div class="col">
-                    <input type="text" id="inputUser" placeholder="Usuario" name="usuario">
-                </div>
+        
+            <!-- Name input -->
+            <div class="form-group mb-4">
+                <input type="text" id="inputUser" placeholder="Usuario" name="usuario" class="form-control" />
             </div>
-            <div class="row">
-                <div class="col">
-                    <input type="password" id="password" placeholder="Contraseña" name="password">
-                </div>
+
+            <!-- Password input -->
+            <div class="form-group mb-4">
+                <input type="password" id="password" placeholder="Contraseña" name="password" class="form-control" />
             </div>
-            <button type="submit">Ingresar</button>
+            {{#if error}}
+            <p>Usuario y o Contraseña incorrectos</p>
+            {{/if}}
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4" >Ingresar</button>
+
+            {{!-- <!-- Register buttons -->
+            <div class="text-center">
+                <p>Nuevo usuario? <a href="#!">Registrate</a></p>
+            </div> --}}
         </form>
-        {{#if error}}
-        <p>usuario y o contraseña incorrectos</p>
-        {{/if}}
-    </div>
 </div>

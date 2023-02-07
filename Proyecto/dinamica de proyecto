@@ -1,0 +1,101 @@
+La pagina web es de un instituto donde tiene varias secciones, entre ellas una de novedades o noticias y otra de Cursos que se estan realizando este semestre
+
+
+Dinamica Novedades 
+
+En cuanto a como se va a realizar el mediante una 
+tabla  en la base de datos con los campos:
+
+id: primary key
+titulo : varchar 100, titulo de la noticias
+fecha :  date , fecha de la noticias
+cuerpo : Text, informacion detallada acerca de la novedade
+imagen : varchar 250, link a imagen a mostrar
+
+
+Operaciones
+
+Get 'Url/noticias/' : obtener la lista de noticias.
+
+  async function getNews()
+    {
+      var query = 'select * from novedades';
+      var rows = await pool.query(query);
+      return rows;
+      }
+
+  
+Get 'Url/noticias/' + id  : obtener la noticia con un id particular
+
+  async function getNews(id)
+    {
+      var query = 'select * from novedades where id = ?';
+      var rows = await pool.query(query, id);
+      return rows;
+      }
+
+Get 'Url/noticias/latest/' + n:int : obtiene las ultimas n noticias
+
+  async function getLatestNews(n)
+    {
+      var query = 'select * from novedades order by `fecha` desc limit ?';
+      var rows = await pool.query(query, n);
+      return rows;
+      }
+
+Post 'Url/noticias/' + body : crear noticia
+
+    async function createNews(titulo, date, cuerpo)
+    {
+      var query = 'inser into `novedades` (`id`, `titulo`, `date`, `cuerpo`) values (NULL, ?, ?, ?);';
+      var rows = await pool.query(query, [tiulo,date,cuerpo]);
+      return rows[0];
+      }
+
+
+
+Put 'Url/noticias/' + id  + body: modificar noticia con id especifico
+
+
+    async function modifyNews(body,id)
+    {
+      var query = "'UPDATE `novedades` SET ? = ? WHERE `id` = ?;";
+      var rows = await pool.query(query, [body.key,body.val,id]);
+      return rows[0];
+      }
+
+
+Delete 'Url/noticia' + id : eliminar noticia con el id especifico
+
+    async function deleteNews(id)
+    {
+      var query = "'DELETE FROM news WHERE `news`.`id` = ?";
+      var rows = await pool.query(query, [id]);
+      return rows;
+      }
+
+
+Dinamica en la pagina Educacional
+
+hay cursos que varian por semestre por lo que al igual que noticias se pueden establecer en la base de datos
+
+En cuanto a como se va a realizar el mediante una 
+tabla  en la base de datos con los campos:
+
+id: primary key
+nombre : varchar 100, nombre del curso
+cuerpo : text , informacion detallada sobre el curso
+imagen : varchar 250, link a imagen a mostrar
+activo : Boolean , booleano que determina si esta activo o no el curso este semestre
+  
+
+Operaciones
+
+Get 'Url/educacional/' : obtener la lista de cursos.
+Get 'Url/educacional/active' : obtiene la lista de cursos activos educacionales
+Get 'Url/educacional/' + id  : obtener el curso con id particular
+Post 'Url/educacional/' + body : crear curso
+Put 'Url/educacional/' + id  + body: modificar urso con id especifico
+Delete 'Url/noticia' + id : eliminar curso con el id especifico
+
+

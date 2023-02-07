@@ -7,9 +7,8 @@ import Row from 'react-bootstrap/Row';
 
 const ContactoPage = (props) => {
     return (
-        <section className='holder contacto'>
+        <section className='contacto'>
 
-            
             <Form className='form1'>
                 <h3>Formulario de Contacto</h3>
                 <Row className="mb-3">

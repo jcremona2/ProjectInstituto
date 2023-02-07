@@ -1,0 +1,42 @@
+<div class="novedades pt-5">
+    <form action="" method="post" enctype="multipart/form-data" class="pt-5">
+
+        <!--Titulo input -->
+        <div class="form-group mb-4">
+            <input type="text" id="titulo" placeholder="Titulo" name="titulo" class="form-control"
+                value="{{obj.titulo}}" />
+        </div>
+
+        <!-- Subtitulo input -->
+        <div class="form-group mb-4">
+            <input type="text" id="subtitulo" placeholder="Subtitulo" name="subtitulo" class="form-control"
+                value="{{obj.subtitulo}}" />
+        </div>
+        <!-- Img input -->
+
+        <div class="form-group mb-4">
+            
+            <input type="file" id="imagen" name="imagen" class="form-control" />
+            
+
+            <label> <input type="checkbox" name="img_delete" id="img_delete" value="1">
+                Eliminar imagen</label>
+
+            <input type="hidden" name="img_original" id="img_original" value="{{obj.img_id}}">
+        </div>
+        <!-- Cuerpo input -->
+        <div class="form-group mb-4">
+            <textarea type="text" id="cuerpo" placeholder="Cuerpo" name="cuerpo"
+                class="form-control">{{obj.cuerpo}}</textarea>
+        </div>
+
+
+        {{#if error}}
+        <p>Error: {{message}}</p>
+        {{/if}}
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Guardar</button>
+
+    </form>
+</div>

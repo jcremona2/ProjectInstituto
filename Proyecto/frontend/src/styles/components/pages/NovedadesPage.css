@@ -5,34 +5,9 @@
     justify-content: space-evenly;
     width: 80vw;
     flex-wrap: wrap;
-
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    2px 2px 4px #ccc, -2px -2px 4px #eee;
 }
 
-
-/* .row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
-.news-card{
-    box-shadow: 1px 1px 100px #395376;
-    margin: 20px;
-    border: 1px solid ;
-    border-radius: 30px;
-}
-
-.news-card div{
-    margin: 10px;
-} */
-
-/* .column img{
-    max-width: max-content;
-    width: 60vw;
-    border-radius: 30px;
-}
-.column h2,h3,h4{
-    text-shadow: 10px 10px 50px lightcyan;
-} */

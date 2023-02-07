@@ -1,47 +1,34 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/components/pages/NovedadesPage.css'
-import Card from 'react-bootstrap/Card';
+import NovedadItem from '../components/novedades/NovedadItem';
+import axios from 'axios';
 
 const GaleryPage = (props) => {
+    const [loading, setLoading] = useState(false);
+    const [novedades, setNovedades] = useState([]);
+    useEffect(() => {
+        const cargarNovedades = async () => {
+            setLoading(true);
+            //const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/novedades`);
+            const response = await axios.get('http://localhost:3000/api/novedades');
+            setNovedades(response.data);
+            setLoading(false);
+        };
+        cargarNovedades();
+
+    }, []);
+
     return (
         <section className='holder'>
-            <Card className="bg-dark text-black">
-                <Card.Img src="../images/noticias/1.png" alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title><b>Card Title</b></Card.Title>
-                    <Card.Text><b>                
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.</b>
-                    </Card.Text>
-                </Card.ImgOverlay>
-            </Card>
-            <Card className="bg-dark text-black">
-                <Card.Img src="../images/noticias/2.png" alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title><b>Card Title</b></Card.Title>
-                    <Card.Text><b>                
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.</b>
-
-                    </Card.Text>
-                </Card.ImgOverlay>
-            </Card>
-            <Card className="bg-dark text-black">
-                <Card.Img src="../images/noticias/3.png" alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title><b>Card Title</b></Card.Title>
-                    <Card.Text><b>                
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.</b>
-
-                    </Card.Text>
-                </Card.ImgOverlay>
-            </Card>
-
-
+            {loading ? (
+                <p>Cargando...</p>
+            ) : (
+                novedades.map(item => <NovedadItem key={item.id}
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            )}
         </section>
     )
 }
-
 
 export default GaleryPage;

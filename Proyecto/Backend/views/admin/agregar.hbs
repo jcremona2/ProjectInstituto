@@ -1,0 +1,31 @@
+<div class="novedades pt-5">
+        <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+        
+            <!-- Titulo input -->
+            <div class="form-group mb-4">
+                <input type="text" id="titulo" placeholder="Titulo" name="titulo" class="form-control" />
+            </div>
+
+            <!-- Subtitulo input -->
+            <div class="form-group mb-4">
+                <input type="text" id="subtitulo" placeholder="Subtitulo" name="subtitulo" class="form-control" />
+            </div>
+
+            <!-- Img input -->
+            <div class="form-group mb-4">
+                <input type="file" id="imagen"  name="imagen" class="form-control" value="{{obj.imagen}}" />
+            </div>
+
+             <!-- Cuerpo input -->
+            <div class="form-group mb-4">
+                <textarea type="text" id="cuerpo" placeholder="Cuerpo" name="cuerpo" class="form-control"></textarea>
+            </div>
+            {{#if error}}
+            <p>Error: {{message}}</p>
+            {{/if}}
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4" >Guardar</button>
+
+        </form>
+</div>
